@@ -15,9 +15,10 @@
             background-color: #f4f4f9;
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
         nav {
-            background-color: #003366; /* Dark blue background for the navbar */
+            background-color: #003366;
             padding: 15px;
             text-align: center;
             position: sticky;
@@ -32,7 +33,7 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #1a73e8; /* Modern blue color on hover */
+            color: #1a73e8;
         }
         .hero {
             background: url('https://www.tsavonationalparkkenya.com/wp-content/uploads/2022/05/aerial-view-hemingways-watamu-malindi-and-watamu-beach-kenya.jpg') no-repeat center center;
@@ -41,7 +42,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #003366; /* Dark blue text color */
+            color: #003366;
             text-align: left;
             padding: 20px;
         }
@@ -50,69 +51,68 @@
         }
         .hero img {
             border-radius: 50%;
-            width: 300px; /* Expanded profile picture size */
+            width: 300px;
             height: 300px;
-            margin-left: 0; /* Shifted profile picture closer to the left */
+            margin-left: 0;
         }
         .hero h1 {
-            color: white; /* White color for the title */
-            margin-bottom: 20px; /* Spacing below the title */
+            color: white;
+            margin-bottom: 20px;
         }
         .hero p {
-            font-size: 1.2em; /* Reduced font size */
-            margin-bottom: 15px; /* Increased space between sentences */
+            font-size: 1.2em;
+            margin-bottom: 15px;
         }
         .hero .highlight {
-            color: white; /* White color for highlighted words */
-            margin-bottom: 10px; /* Spacing between highlighted words */
+            color: white;
+            margin-bottom: 10px;
         }
         .container {
+            display: flex;
+            flex-wrap: wrap;
             padding: 30px;
-            text-align: left; /* Align text to the left */
         }
-        .section {
-            margin-bottom: 40px;
+        .left-column,
+        .right-column {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
         }
-        .section h2 {
-            font-size: 1.8em;
-            color: #003366; /* Dark blue color for heading */
+        .left-column {
+            border-right: 2px solid #ccc; /* Dividing line between columns */
+        }
+        .left-column h2,
+        .right-column h2 {
+            color: #003366;
             margin-bottom: 20px;
-            text-align: center; /* Centered heading */
         }
-        .section p, .section ul {
-            text-align: justify; /* Justify text in content sections */
+        .left-column p,
+        .right-column p,
+        .left-column ul,
+        .right-column ul {
+            text-align: justify;
         }
-        .section ul {
+        .left-column ul,
+        .right-column ul {
             list-style: none;
             padding: 0;
         }
-        .section li {
+        .left-column li,
+        .right-column li {
             margin-bottom: 10px;
-        }
-        .section a {
-            color: #003366;
-            text-decoration: none;
-        }
-        .section a:hover {
-            text-decoration: underline;
-        }
-        .images-section img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
         }
         .icons {
             display: flex;
-            justify-content: center; /* Center the icons */
-            gap: 20px; /* Space between icons */
+            justify-content: center;
+            gap: 20px;
             margin-top: 20px;
         }
         .icons a {
-            color: #003366; /* Dark blue icon color */
-            font-size: 2em; /* Larger icon size */
-            transition: color 0.3s ease; /* Smooth transition for icon color */
-            background-color: #fff; /* White background */
-            border-radius: 50%; /* Round format */
+            color: #fff;
+            font-size: 2em;
+            transition: color 0.3s ease;
+            background-color: #fff;
+            border-radius: 50%;
             padding: 10px;
             display: flex;
             align-items: center;
@@ -121,8 +121,46 @@
             height: 50px;
             text-align: center;
         }
+        .icons a.fa-linkedin {
+            background-color: #0077b5; /* LinkedIn blue color */
+            color: #fff;
+        }
+        .icons a.fa-envelope {
+            background-color: #003366;
+            color: #fff;
+        }
+        .icons a.fa-phone {
+            background-color: #28a745;
+            color: #fff;
+        }
         .icons a:hover {
-            color: #1a73e8; /* Modern blue color on hover */
+            opacity: 0.8; /* Slight fade effect on hover */
+        }
+        .contact-card {
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .contact-card h3 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        .contact-card p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #1a73e8;
+            text-decoration: none;
         }
     </style>
     <script>
@@ -163,68 +201,91 @@
                 <h1>Ester Agasha (Ph.D)</h1>
                 <p class="highlight">President, SENLA Research Group</p>
                 <p class="highlight">Researcher | Development Economist</p>
+                <a href="https://senlaresearchhub.org/" target="_blank" style="color:white; text-decoration:underline;">Visit SENLA Research Hub</a>
             </div>
             <img src="https://cega.berkeley.edu/wp-content/uploads/2021/07/Ester-Agasha.png" alt="Ester Agasha">
         </div>
         <div class="container">
-            <h2>Biography</h2>
-            <p>As a development economist and former academic staff member at Makerere University, I am deeply committed to the practical application of rigorous research in economic development. My expertise lies in blending advanced econometric methods and geospatial data analysis to address critical issues in developing economies. Originally from Uganda and now based in the United States, I have dedicated my career to fostering financial literacy and empowerment, particularly among women, through innovative educational programs and targeted research initiatives. My current research ventures include a fascinating exploration of the relationship between dietary patterns and environmental factors in Uganda. Utilizing sophisticated geospatial mapping tools, I am investigating how variations in the National Vegetation Index correlate with local food choices. This project not only highlights the intersection of geography and nutrition but also serves as a vital tool for developing targeted interventions that can enhance food security and dietary quality in resource-limited settings. In addition to my environmental research, I have pioneered a randomized controlled trial in Eastern Uganda aimed at enhancing financial literacy and aspirations among women micro-entrepreneurs. This project utilizes a gamified digital application to educate women on financial management, coupled with motivational strategies that inspire and elevate their economic roles. The preliminary findings indicate a notable improvement in financial behaviors and empowerment, underscoring the potential of integrated educational technologies in stimulating profound economic and social growth. Throughout my academic and professional journey, I have consistently pushed the boundaries of traditional economic research to include multidimensional and interdisciplinary approaches. My work has not only been recognized in academic circles but has also influenced policy discussions and development strategies globally. As I continue to engage with various stakeholders from academic, governmental, and non-governmental organizations, my goal remains to catalyze sustainable development through education, empowerment, and evidence-based policies.</p>
-            <p>Download my <a href="Resume" target="_blank">Resume</a></p> <!-- Resume link in Home section -->
+            <div class="left-column">
+                <h2>Biography</h2>
+                <p>As a development economist and former academic staff member at Makerere University, I am deeply committed to the practical application of rigorous research in economic development. My expertise lies in blending advanced econometric methods and geospatial data analysis to address critical issues in developing economies. Originally from Uganda and now based in the United States, I have dedicated my career to fostering financial literacy and empowerment, particularly among women, through innovative educational programs and targeted research initiatives.</p>
+                <p>My current research ventures include a fascinating exploration of the relationship between dietary patterns and environmental factors in Uganda. Utilizing sophisticated geospatial mapping tools, I am investigating how variations in the National Vegetation Index correlate with local food choices. This project not only highlights the intersection of geography and nutrition but also serves as a vital tool for developing targeted interventions that can enhance food security and dietary quality in resource-limited settings.</p>
+                <p>Download my <a href="Resume" target="_blank">Resume</a></p>
+            </div>
+            <div class="right-column">
+                <h2>Professional Background</h2>
+                <ul>
+                    <li>2023 Network of Impact Evaluation Researchers in Africa (NIERA)</li>
+                    <li>2021 Non-Residential Fellow, CEGA at UC Berkeley</li>
+                    <li>2018 DAAD in-country/in-region Ph.D. Fellowship</li>
+                </ul>
+                <h2>Educational Background</h2>
+                <ul>
+                    <li>Ph.D. in Management, Mbarara University</li>
+                    <li>MSc. in International and Development Economics, University of San Francisco</li>
+                    <li>MSc. in Finance and Investment, Makerere University</li>
+                    <li>Bachelor's in Business Administration, Makerere University</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <!-- Research & Publications Section -->
     <div id="research-section" class="section" style="display: none;">
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Ester Agasha (Ph.D)</h1>
-                <p class="highlight">President, SENLA Research Group</p>
-                <p class="highlight">Researcher | Development Economist</p>
-            </div>
-            <img src="https://cega.berkeley.edu/wp-content/uploads/2021/07/Ester-Agasha.png" alt="Ester Agasha">
-        </div>
         <div class="container">
-            <h2>Research & Publications</h2>
-            <h3>Book Chapters</h3>
-            <ul>
-                <li>Rono, L. J., & Agasha, E. (2020). Psychological Determinants of Employees' Intentions to Retire: A Case of Public Universities in Kenya. In A Multidimensional Economic Assessment of Africa (pp. 181-198). Springer, Singapore.</li>
-                <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
-            </ul>
-            <h3>Published Articles</h3>
-            <ul>
-                <li>Rono, L. J., Agasha, E., & Lagat, C. K. (2021). An assessment of employees' intention to retire in Kenya. Journal for Global Business Advancement, 14(1), 46-69.</li>
-                <li>Agasha, E., Rono, L. J., & Nkote, I. N. (2020). Is Financial Inclusion Effective in Eradicating Poverty? The Journal of Development Practice, 6.</li>
-                <li>Agasha, E., Monametsi, G., & Feela, T. (2020). Loan Portfolio Quality of Microfinance Institutions in Uganda: A Qualitative Assessment. Journal of Financial Risk Management, 9(02), 155.</li>
-                <li>Monametsi, G., Rono, L., and Agasha, E. (2020). Audit Quality and Firm Performance in Botswana, Kenya and Uganda. Open Journal of Accounting. ISSN 2222-1905(Paper), ISSN 2222-2839 (Online) Vol.10, Issue No.24.</li>
-                <li>Agasha. E., Kamukama. N., Sserwanga. A., (2021). The mediating role of cost of capital in Uganda's Microfinance Institutions. African Journal of Economic and Management Studies (AJEMS).</li>
-                <li>Agasha. E., Frankwick. G. L., Kamukama. N., Sserwanga. A., (2021). The moderating role of employee work experience on the relationship between credit risk assessment and loan performance: A survey of Microfinance institutions in Uganda. Journal of Global Business Advancement.</li>
-            </ul>
-            <h3>Working Papers</h3>
-            <ul>
-                <li>Porath. D., Nabachwa. S., Agasha., Kijjambu. F., (2021). Innovation and Employment in Sub-Saharan Africa. In: UASM Discussion Paper Series No. 11, University of Applied Sciences Mainz/Germany.</li>
-            </ul>
-            <h3>Unpublished Research</h3>
-            <ul>
-                <li>Agasha, E., & Wydick, B. Financial Literacy and Aspirations: A Pilot Experiment from Eastern Uganda.</li>
-            </ul>
-            <p>Download my <a href="Resume" target="_blank">Resume</a></p> <!-- Resume link in Research section -->
+            <div class="left-column">
+                <h2>Research & Publications</h2>
+                <h3>Book Chapters</h3>
+                <ul>
+                    <li>Rono, L. J., & Agasha, E. (2020). Psychological Determinants of Employees' Intentions to Retire: A Case of Public Universities in Kenya. In A Multidimensional Economic Assessment of Africa (pp. 181-198). Springer, Singapore.</li>
+                    <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
+                </ul>
+                <h3>Published Articles</h3>
+                <ul>
+                    <li>Rono, L. J., Agasha, E., & Lagat, C. K. (2021). An assessment of employees' intention to retire in Kenya. Journal for Global Business Advancement, 14(1), 46-69.</li>
+                    <li>Agasha, E., Rono, L. J., & Nkote, I. N. (2020). Is Financial Inclusion Effective in Eradicating Poverty? The Journal of Development Practice, 6.</li>
+                    <li>Agasha, E., Monametsi, G., & Feela, T. (2020). Loan Portfolio Quality of Microfinance Institutions in Uganda: A Qualitative Assessment. Journal of Financial Risk Management, 9(02), 155.</li>
+                    <li>Monametsi, G., Rono, L., and Agasha, E. (2020). Audit Quality and Firm Performance in Botswana, Kenya and Uganda. Open Journal of Accounting. ISSN 2222-1905(Paper), ISSN 2222-2839 (Online) Vol.10, Issue No.24.</li>
+                    <li>Agasha. E., Kamukama. N., Sserwanga. A., (2021). The mediating role of cost of capital in Uganda's Microfinance Institutions. African Journal of Economic and Management Studies (AJEMS).</li>
+                    <li>Agasha. E., Frankwick. G. L., Kamukama. N., Sserwanga. A., (2021). The moderating role of employee work experience on the relationship between credit risk assessment and loan performance: A survey of Microfinance institutions in Uganda. Journal of Global Business Advancement.</li>
+                </ul>
+            </div>
+            <div class="right-column">
+                <h2>Working Papers & Unpublished Research</h2>
+                <h3>Working Papers</h3>
+                <ul>
+                    <li>Porath. D., Nabachwa. S., Agasha., Kijjambu. F., (2021). Innovation and Employment in Sub-Saharan Africa. In: UASM Discussion Paper Series No. 11, University of Applied Sciences Mainz/Germany.</li>
+                </ul>
+                <h3>Unpublished Research</h3>
+                <ul>
+                    <li>Agasha, E., & Wydick, B. Financial Literacy and Aspirations: A Pilot Experiment from Eastern Uganda.</li>
+                </ul>
+                <p>Download my <a href="Resume" target="_blank">Resume</a></p>
+            </div>
         </div>
     </div>
 
     <!-- Contact Section -->
     <div id="contact-section" class="section" style="display: none;">
         <div class="container">
-            <h2>Contact Information</h2>
-            <p>Email: agashaester660@gmail.com</p>
-            <p>Email: aester@senlaresearchhub.org</p>
-            <p>Phone: +1 (415) 525-6038</p>
-            <div class="icons">
-                <a href="mailto:agashaester660@gmail.com"><i class="fa fa-envelope"></i></a>
-                <a href="mailto:aester@senlaresearchhub.org"><i class="fa fa-envelope"></i></a>
-                <a href="tel:+14155256038"><i class="fa fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <div class="contact-card">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> agashaester660@gmail.com</p>
+                <p><strong>Email:</strong> aester@senlaresearchhub.org</p>
+                <p><strong>Phone:</strong> +1 (415) 525-6038</p>
+                <div class="icons">
+                    <a href="mailto:agashaester660@gmail.com" class="fa fa-envelope"></a>
+                    <a href="mailto:aester@senlaresearchhub.org" class="fa fa-envelope"></a>
+                    <a href="tel:+14155256038" class="fa fa-phone"></a>
+                    <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank" class="fa fa-linkedin"></a>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ester Agasha. All rights reserved. Visit <a href="https://senlaresearchhub.org/" target="_blank">SENLA Research Hub</a>.</p>
+    </footer>
 </body>
 </html>
