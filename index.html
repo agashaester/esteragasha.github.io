@@ -38,7 +38,7 @@
         .hero {
             background: url('https://www.tsavonationalparkkenya.com/wp-content/uploads/2022/05/aerial-view-hemingways-watamu-malindi-and-watamu-beach-kenya.jpg') no-repeat center center;
             background-size: cover;
-            height: 300px;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -101,6 +101,28 @@
         .right-column li {
             margin-bottom: 10px;
         }
+        .contact-info {
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .contact-info h3 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .contact-info a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
         .icons {
             display: flex;
             justify-content: center;
@@ -111,7 +133,6 @@
             color: #fff;
             font-size: 2em;
             transition: color 0.3s ease;
-            background-color: #fff;
             border-radius: 50%;
             padding: 10px;
             display: flex;
@@ -136,20 +157,19 @@
         .icons a:hover {
             opacity: 0.8; /* Slight fade effect on hover */
         }
-        .contact-card {
-            background-color: #eaeaea;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .resume-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #1a73e8; /* Google Blue */
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
             margin-top: 20px;
+            text-align: center;
         }
-        .contact-card h3 {
-            color: #003366;
-            margin-bottom: 15px;
-        }
-        .contact-card p {
-            margin-bottom: 10px;
-            line-height: 1.5;
+        .resume-button:hover {
+            background-color: #1358a0; /* Darker blue on hover */
         }
         footer {
             background-color: #003366;
@@ -210,7 +230,7 @@
                 <h2>Biography</h2>
                 <p>As a development economist and former academic staff member at Makerere University, I am deeply committed to the practical application of rigorous research in economic development. My expertise lies in blending advanced econometric methods and geospatial data analysis to address critical issues in developing economies. Originally from Uganda and now based in the United States, I have dedicated my career to fostering financial literacy and empowerment, particularly among women, through innovative educational programs and targeted research initiatives.</p>
                 <p>My current research ventures include a fascinating exploration of the relationship between dietary patterns and environmental factors in Uganda. Utilizing sophisticated geospatial mapping tools, I am investigating how variations in the National Vegetation Index correlate with local food choices. This project not only highlights the intersection of geography and nutrition but also serves as a vital tool for developing targeted interventions that can enhance food security and dietary quality in resource-limited settings.</p>
-                <p>Download my <a href="Resume" target="_blank">Resume</a></p>
+                <a href="Resume" class="resume-button" target="_blank">Download My Resume</a> <!-- Visible Resume Button -->
             </div>
             <div class="right-column">
                 <h2>Professional Background</h2>
@@ -226,6 +246,19 @@
                     <li>MSc. in Finance and Investment, Makerere University</li>
                     <li>Bachelor's in Business Administration, Makerere University</li>
                 </ul>
+                <!-- Contact Info Infused into Home Section -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:agashaester660@gmail.com">agashaester660@gmail.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:aester@senlaresearchhub.org">aester@senlaresearchhub.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+14155256038">+1 (415) 525-6038</a></p>
+                    <div class="icons">
+                        <a href="mailto:agashaester660@gmail.com" class="fa fa-envelope"></a>
+                        <a href="mailto:aester@senlaresearchhub.org" class="fa fa-envelope"></a>
+                        <a href="tel:+14155256038" class="fa fa-phone"></a>
+                        <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank" class="fa fa-linkedin"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -238,7 +271,7 @@
                 <h3>Book Chapters</h3>
                 <ul>
                     <li>Rono, L. J., & Agasha, E. (2020). Psychological Determinants of Employees' Intentions to Retire: A Case of Public Universities in Kenya. In A Multidimensional Economic Assessment of Africa (pp. 181-198). Springer, Singapore.</li>
-                    <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
+                    <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial Attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
                 </ul>
                 <h3>Published Articles</h3>
                 <ul>
@@ -260,25 +293,7 @@
                 <ul>
                     <li>Agasha, E., & Wydick, B. Financial Literacy and Aspirations: A Pilot Experiment from Eastern Uganda.</li>
                 </ul>
-                <p>Download my <a href="Resume" target="_blank">Resume</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact-section" class="section" style="display: none;">
-        <div class="container">
-            <div class="contact-card">
-                <h3>Contact Information</h3>
-                <p><strong>Email:</strong> agashaester660@gmail.com</p>
-                <p><strong>Email:</strong> aester@senlaresearchhub.org</p>
-                <p><strong>Phone:</strong> +1 (415) 525-6038</p>
-                <div class="icons">
-                    <a href="mailto:agashaester660@gmail.com" class="fa fa-envelope"></a>
-                    <a href="mailto:aester@senlaresearchhub.org" class="fa fa-envelope"></a>
-                    <a href="tel:+14155256038" class="fa fa-phone"></a>
-                    <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank" class="fa fa-linkedin"></a>
-                </div>
+                <a href="Resume" class="resume-button" target="_blank">Download My Resume</a> <!-- Visible Resume Button in Research Section -->
             </div>
         </div>
     </div>
