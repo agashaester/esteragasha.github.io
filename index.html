@@ -16,6 +16,24 @@
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        nav {
+            background-color: #003366; /* Dark blue background for the navbar */
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #1a73e8; /* Modern blue color on hover */
+        }
         .hero {
             background: url('https://www.tsavonationalparkkenya.com/wp-content/uploads/2022/05/aerial-view-hemingways-watamu-malindi-and-watamu-beach-kenya.jpg') no-repeat center center;
             background-size: cover;
@@ -48,53 +66,34 @@
             color: white; /* White color for highlighted words */
             margin-bottom: 10px; /* Spacing between highlighted words */
         }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            color: #003366;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
         .container {
             padding: 30px;
-        }
-        .content-section {
-            margin-bottom: 40px;
             text-align: left; /* Align text to the left */
         }
-        .content-section.centered {
-            text-align: center; /* Center text */
+        .section {
+            margin-bottom: 40px;
         }
-        .content-section h2 {
+        .section h2 {
             font-size: 1.8em;
             color: #003366; /* Dark blue color for heading */
             margin-bottom: 20px;
             text-align: center; /* Centered heading */
         }
-        .content-section p, .content-section ul {
+        .section p, .section ul {
             text-align: justify; /* Justify text in content sections */
         }
-        .content-section.centered p, .content-section.centered ul {
-            text-align: center; /* Center text in specific sections */
-        }
-        .content-section ul {
+        .section ul {
             list-style: none;
             padding: 0;
         }
-        .content-section li {
+        .section li {
             margin-bottom: 10px;
         }
-        .content-section a {
+        .section a {
             color: #003366;
             text-decoration: none;
         }
-        .content-section a:hover {
+        .section a:hover {
             text-decoration: underline;
         }
         .images-section img {
@@ -150,6 +149,12 @@
     </script>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#research">Research & Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <!-- Home Section -->
     <div id="home-section" class="section">
@@ -161,41 +166,10 @@
             </div>
             <img src="https://cega.berkeley.edu/wp-content/uploads/2021/07/Ester-Agasha.png" alt="Ester Agasha">
         </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#research">Research & Publications</a>
-        </nav>
         <div class="container">
-            <div class="content-section">
-                <h2>Biography</h2>
-                <p>As a development economist and former academic staff member at Makerere University, I am deeply committed to the practical application of rigorous research in economic development. My expertise lies in blending advanced econometric methods and geospatial data analysis to address critical issues in developing economies. Originally from Uganda and now based in the United States, I have dedicated my career to fostering financial literacy and empowerment, particularly among women, through innovative educational programs and targeted research initiatives. My current research ventures include a fascinating exploration of the relationship between dietary patterns and environmental factors in Uganda. Utilizing sophisticated geospatial mapping tools, I am investigating how variations in the National Vegetation Index correlate with local food choices. This project not only highlights the intersection of geography and nutrition but also serves as a vital tool for developing targeted interventions that can enhance food security and dietary quality in resource-limited settings. In addition to my environmental research, I have pioneered a randomized controlled trial in Eastern Uganda aimed at enhancing financial literacy and aspirations among women micro-entrepreneurs. This project utilizes a gamified digital application to educate women on financial management, coupled with motivational strategies that inspire and elevate their economic roles. The preliminary findings indicate a notable improvement in financial behaviors and empowerment, underscoring the potential of integrated educational technologies in stimulating profound economic and social growth. Throughout my academic and professional journey, I have consistently pushed the boundaries of traditional economic research to include multidimensional and interdisciplinary approaches. My work has not only been recognized in academic circles but has also influenced policy discussions and development strategies globally. As I continue to engage with various stakeholders from academic, governmental, and non-governmental organizations, my goal remains to catalyze sustainable development through education, empowerment, and evidence-based policies.</p>
-            </div>
-            <div class="content-section centered">
-                <h2>Professional Background</h2>
-                <ul>
-                    <li>2023 Network of Impact Evaluation Researchers in Africa (NIERA)</li>
-                    <li>2021 Non-Residential Fellow, CEGA at UC Berkeley</li>
-                    <li>2018 DAAD in-country/in-region Ph.D. Fellowship</li>
-                </ul>
-                <h2>Educational Background</h2>
-                <ul>
-                    <li>Ph.D. in Management, Mbarara University</li>
-                    <li>MSc. in International and Development Economics, University of San Francisco</li>
-                    <li>MSc. in Finance and Investment, Makerere University</li>
-                    <li>Bachelor's in Business Administration, Makerere University</li>
-                </ul>
-                <h2>Contacts</h2>
-                <p>Email: agashaester660@gmail.com</p>
-                <p>Email: aester@senlaresearchhub.org</p>
-                <p>Phone: +1 (415) 525-6038</p> <!-- Updated phone number as text -->
-                <p>Download my <a href="Resume" target="_blank">Resume</a></p> <!-- Link to your uploaded resume file -->
-                <div class="icons">
-                    <a href="mailto:agashaester660@gmail.com"><i class="fa fa-envelope"></i></a>
-                    <a href="mailto:aester@senlaresearchhub.org"><i class="fa fa-envelope"></i></a>
-                    <a href="tel:+14155256038"><i class="fa fa-phone"></i></a> <!-- Updated clickable phone number link -->
-                    <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank"><i class="fa fa-LinkedIn"></i></a> <!-- LinkedIn link -->
-                </div>
-            </div>
+            <h2>Biography</h2>
+            <p>As a development economist and former academic staff member at Makerere University, I am deeply committed to the practical application of rigorous research in economic development. My expertise lies in blending advanced econometric methods and geospatial data analysis to address critical issues in developing economies. Originally from Uganda and now based in the United States, I have dedicated my career to fostering financial literacy and empowerment, particularly among women, through innovative educational programs and targeted research initiatives. My current research ventures include a fascinating exploration of the relationship between dietary patterns and environmental factors in Uganda. Utilizing sophisticated geospatial mapping tools, I am investigating how variations in the National Vegetation Index correlate with local food choices. This project not only highlights the intersection of geography and nutrition but also serves as a vital tool for developing targeted interventions that can enhance food security and dietary quality in resource-limited settings. In addition to my environmental research, I have pioneered a randomized controlled trial in Eastern Uganda aimed at enhancing financial literacy and aspirations among women micro-entrepreneurs. This project utilizes a gamified digital application to educate women on financial management, coupled with motivational strategies that inspire and elevate their economic roles. The preliminary findings indicate a notable improvement in financial behaviors and empowerment, underscoring the potential of integrated educational technologies in stimulating profound economic and social growth. Throughout my academic and professional journey, I have consistently pushed the boundaries of traditional economic research to include multidimensional and interdisciplinary approaches. My work has not only been recognized in academic circles but has also influenced policy discussions and development strategies globally. As I continue to engage with various stakeholders from academic, governmental, and non-governmental organizations, my goal remains to catalyze sustainable development through education, empowerment, and evidence-based policies.</p>
+            <p>Download my <a href="Resume" target="_blank">Resume</a></p> <!-- Resume link in Home section -->
         </div>
     </div>
 
@@ -209,15 +183,12 @@
             </div>
             <img src="https://cega.berkeley.edu/wp-content/uploads/2021/07/Ester-Agasha.png" alt="Ester Agasha">
         </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#research">Research & Publications</a>
-        </nav>
-        <div class="container content-section">
+        <div class="container">
+            <h2>Research & Publications</h2>
             <h3>Book Chapters</h3>
             <ul>
                 <li>Rono, L. J., & Agasha, E. (2020). Psychological Determinants of Employees' Intentions to Retire: A Case of Public Universities in Kenya. In A Multidimensional Economic Assessment of Africa (pp. 181-198). Springer, Singapore.</li>
-                <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial Attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
+                <li>Agasha. E., Bakunda. B., & Rono, L. J. (2018). Financial Literacy, Financial attitude and Savings Behavior of Youth in Uganda: In Defining the Frontiers of Global Business Research across Emerging Countries (pp. 155-174). McGraw Hill Education, India.</li>
             </ul>
             <h3>Published Articles</h3>
             <ul>
@@ -234,10 +205,26 @@
             </ul>
             <h3>Unpublished Research</h3>
             <ul>
-                <li>Agasha, E., & Wydick, B. Financial Literacy, and Aspirations: A Pilot Experiment from Eastern Uganda.</li>
+                <li>Agasha, E., & Wydick, B. Financial Literacy and Aspirations: A Pilot Experiment from Eastern Uganda.</li>
             </ul>
+            <p>Download my <a href="Resume" target="_blank">Resume</a></p> <!-- Resume link in Research section -->
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-section" class="section" style="display: none;">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <p>Email: agashaester660@gmail.com</p>
+            <p>Email: aester@senlaresearchhub.org</p>
+            <p>Phone: +1 (415) 525-6038</p>
+            <div class="icons">
+                <a href="mailto:agashaester660@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="mailto:aester@senlaresearchhub.org"><i class="fa fa-envelope"></i></a>
+                <a href="tel:+14155256038"><i class="fa fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/ester-agasha-b095751ba/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
